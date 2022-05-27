@@ -41,8 +41,8 @@ int main(){
         if(head==NULL){
             head=temp=newnode;
         }else{
-            temp->next=newnode;
-            temp=temp->next;
+            newnode->next=head;
+            head=newnode;
             
         }
 
