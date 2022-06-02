@@ -45,7 +45,10 @@ int main(){
             newnode->next=head;
 		//SHIFT newnode to Head as pointer
             head=newnode;
-            
+            //SHIFTING AS
+		// T -> N.N
+		       // T -> N.N
+		               // T  -> N.N
         }
 
     }
