@@ -35,15 +35,18 @@ int main(){
         //input data
         printf("Enter the data:");
         scanf("%d", &newnode->data);
+        //INITIALY
         newnode->next = NULL;
 
         //TRAVERSING
         if(head==NULL){
             head=temp=newnode;
         }else{
+            //Shifting Newnode by initializing to TEMP->NEXT POINTER
             temp->next=newnode;
+            //Shifting TEMP by initializing to TEMP=TEMP->NEXT
             temp=temp->next;
-            
+             
         }
 
     }
