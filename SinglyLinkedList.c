@@ -46,6 +46,10 @@ int main(){
             temp->next=newnode;
             //Shifting TEMP by initializing to TEMP=TEMP->NEXT
             temp=temp->next;
+		//SHIFTING AS
+		// T -> N.N
+		       // T -> N.N
+		               // T  -> N.N
              
         }
 
