@@ -35,6 +35,7 @@ int main(){
 
         if(head==NULL){
             head=temp=newnode;
+	    //initial
             temp->next=NULL;
         }else{
             temp=newnode;
