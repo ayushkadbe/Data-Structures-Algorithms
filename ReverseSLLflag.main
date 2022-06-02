@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//ALGORITHM
+//struct node declaration
+//int main
+//Inside while
+//Accept Input Data
+//initial node declaratin newnode->next=NULL
+//Memory Allocation
+//Shifting T -> H using if-else
+//Input 1 to accept & 0 to stop
+//Display with temp=head;
+
+struct node{
+    int data;
+    struct node* next;
+};
+
+int main(){
+    struct node *temp, *newnode, *head;
+    int i, flag=1;
+
+    //initially
+    head=temp=NULL;
+    
+
+    while(flag){
+        newnode=(struct node*)malloc(sizeof(struct node*));
+        
+        printf("Input Data:");
+        scanf("%d",&newnode->data);
+
+        newnode->next=NULL;
+
+        if(head==NULL){
+            head=temp=newnode;
+            temp->next=NULL;
+        }else{
+            temp=newnode;
+			////Traverse using HEAD POINTER
+			temp->next=head;
+			//TRAVERSE TEMP
+			head=temp;
+            //SHIFTING AS
+            // T = N.N
+                // T  -> H
+                        // T -> H
+             
+        }
+        printf("Input 1 to add node & 0 to stop:");
+        scanf("%d", &flag);
+    }
+
+    temp=head;
+    while(temp){
+        printf("%d > ",temp->data);
+        temp=temp->next;
+    }
+}
