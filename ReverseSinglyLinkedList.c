@@ -41,7 +41,9 @@ int main(){
         if(head==NULL){
             head=temp=newnode;
         }else{
+		//INITIALLY newnode->next=head with Newnode as pointer
             newnode->next=head;
+		//SHIFT newnode to Head as pointer
             head=newnode;
             
         }
