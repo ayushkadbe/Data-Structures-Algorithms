@@ -1,0 +1,127 @@
+#include<stdio.h>
+#include<stdlib.h>
+//Structure of Node
+struct node
+{
+	int data;
+	struct node *next;
+};
+
+int main()
+{
+	struct node *newnode, *temp,*head,*del;
+	int i,n,flag=1;
+	int search=0,count=1,num;
+
+	head=temp=NULL;
+	//List insertion at end
+	while(flag)
+	{
+		newnode=(struct node*)malloc(sizeof(struct node*));
+		printf("\n Input data:");
+		scanf("%d",&newnode->data);
+		newnode->next=NULL;
+		//Bring newnode into linked list
+		//TRAVERSING
+        if(head==NULL){
+            head=temp=newnode;
+        }else{
+            //Shifting Newnode by initializing to TEMP->NEXT POINTER
+            temp->next=newnode;
+            //Shifting TEMP by initializing to TEMP=TEMP->NEXT
+            temp=temp->next;
+		//SHIFTING AS
+		// T -> N.N
+		       // T -> N.N
+		               // T  -> N.N
+             
+        }
+		printf("\n Do u want to add more element(0 for No 1 for Yes):");
+		scanf("%d",&flag);
+	}
+
+	//DISPLAY
+	printf("\n List elements are:");
+	temp=head;
+	while(temp)
+	{
+		printf(" %d",temp->data);
+		temp=temp->next;
+	}
+	
+	//SEARCH
+	printf("\n Input no to search:");
+	scanf("%d",&num);
+	temp=head;
+	
+	while(temp)
+	{
+		if(temp->data==num)
+		{
+			search=1;
+			break;
+		}
+		count++;
+		temp=temp->next;
+	}
+
+	if(search)
+		printf("\n %d is found at %d position",num,count);
+	else
+		printf("\n%d is not present in the list ",num);
+}
+	//List insertion at begining
+	/*while(flag)
+	 { *
+		 newnode=(struct node*)malloc(sizeof(struct node*));
+		 printf("\n Input data:");
+		 scanf("%d",&newnode->data);
+		 newnode->next=NULL;
+		 //Bring newnode into linked list
+		 if(head==NULL)
+		 {
+			 head=temp=newnode;
+		 }
+		 else
+		 {
+			 newnode->next=head;
+			 head=newnode;
+		 }
+		 printf("\n Do u want to add more element(0 for No 1 for Yes):");
+		 scanf("%d",&flag);
+	 } */
+	//Insert Node at middle position
+	/*
+	 t *emp=head;
+	 printf("\n Input position to delete data:");
+	 scanf("%d",&pos);
+	 if(pos==1)
+	 {
+		 del=temp;
+		 head=temp=temp->next;
+		 free(del);
+	 }
+	 else{
+		 for(i=1; i<pos-1; i++)         // T      D
+			 temp=temp->next;             // 5 10-4  20-4 30-0
+			 //	 2     3     4
+			 del=temp->next;
+		 temp->next=del->next;
+		 
+		 free(del);
+	 }
+	 temp=head;
+	 //Dispaly linked list elements
+	 printf("\n List elements are:");
+	 /*for(i=0;i<n; i++)
+	  { *
+		  printf(" %d",temp->data);
+		  temp=temp->next;
+	  } */
+	 /*
+	  w *hile(temp)
+	  {
+		  printf(" %d",temp->data);
+		  temp=temp->next;
+	  } */
+	
