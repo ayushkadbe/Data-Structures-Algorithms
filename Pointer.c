@@ -8,7 +8,8 @@ int main(){
     int n = 10;
     int *pvar;
     int *ppvar;
-
+    
+     //int *pvar = &n is also same
     pvar= &n;  //pointer to variable
     ppvar= &pvar;  //pointer to pointer
 
