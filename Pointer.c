@@ -7,7 +7,7 @@
 int main(){
     int n = 10;
     int *pvar;
-    int *ppvar;
+    int **ppvar; //double pointer
     
      //int *pvar = &n is also same
     pvar= &n;  //pointer to variable
