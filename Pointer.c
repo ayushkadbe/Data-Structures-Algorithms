@@ -1,72 +1,47 @@
+//Write a ‘C’ program to declare variable, pointer variable and pointer to
+//pointer variable.
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    int var1= 345;
-    int var2[10];
-    int *pvar = &var1;
-    int *pvar1;
-  
-    printf("\nAddress of var1 %d", &var1);
-    printf("\nAdress of pointer variable pvar %d", pvar);
-    printf("\nAddress of pointer variable pvar1 %d", pvar1);
-    
-    printf("\nValue of var1 %d", var1);
-    printf("\nValue of pointer variable pvar %d", *pvar);
-    printf("\nValue of pointer variable pvar1 %d", pvar1);
+int main(){
+    int n = 10;
+    int *pvar;
+    int *ppvar;
 
-    //signed decimal integer
-    printf("\npvar %d",pvar);
-    printf("\n*pvar %d", *pvar);
-    
-    //unsigned decimal integer
-    printf("\npvar %u",pvar);
-    printf("\n*pvar %u",*pvar);
+    pvar= &n;  //pointer to variable
+    ppvar= &pvar;  //pointer to pointer
 
-    //unsigned hexadecimal integer
-    printf("\npvar %x",pvar);
-    printf("\n*pvar %x",*pvar);
-    
-    //printing pointer address
-    printf("\nprint pointer pvar %p",pvar);
-    printf("\nvalue of pointer *pvar %p",*pvar);
-  
+    printf("\n Address of n: %d", &n);
+    printf("\n Address of pvar: %d", &pvar);
+    printf("\n Address of ppvar: %d", &ppvar);
+
+    printf("\n\n Value of n: %d", n);
+    printf("\n Value of pvar(i.e address of n): %d", pvar);
+    printf("\n Value of ppvar(i.e address of pvar): %d", ppvar);
+
+    printf("\n\n Value of n:%d", n);
+    printf("\n Value of at address assigned to pvar: %d", *pvar);
+    printf("\n Value of at address assigned to ppvar: %d", *ppvar);    
+
 }
+
 
 /*
 OUTPUT:
-#include <stdio.h>
-#include <stdlib.h>
+     |          ^
 
-int main() {
-    int var1= 345;
-    int var2[10];
-    int *pvar = &var1;
-    int *pvar1;
-  
-    printf("\nAddress of var1 %d", &var1);
-    printf("\nAdress of pointer variable pvar %d", pvar);
-    printf("\nAddress of pointer variable pvar1 %d", pvar1);
-    
-    printf("\nValue of var1 %d", var1);
-    printf("\nValue of pointer variable pvar %d", *pvar);
-    printf("\nValue of pointer variable pvar1 %d", pvar1);
+ Address of n: -338570612
+ Address of pvar: -338570624
+ Address of ppvar: -338570632
 
-    //signed decimal integer
-    printf("\npvar %d",pvar);
-    printf("\n*pvar %d", *pvar);
-    
-    //unsigned decimal integer
-    printf("\npvar %u",pvar);
-    printf("\n*pvar %u",*pvar);
+ Value of n: 10
+ Value of pvar(i.e address of n): -338570612
+ Value of ppvar(i.e address of pvar): -338570624
 
-    //unsigned hexadecimal integer
-    printf("\npvar %x",pvar);
-    printf("\n*pvar %x",*pvar);
-    
-    //printing pointer address
-    printf("\nprint pointer pvar %p",pvar);
-    printf("\nvalue of pointer *pvar %p",*pvar);
-  
-}
+ Value of n:10
+ Value of at address assigned to pvar: 10
+ Value of at address assigned to ppvar: -338570612┌─[infinitex@infinite]─[~/Documents/vs_code/DS/TEMP]
+└──╼ $^C
+┌─[✗]─[infinitex@infinite]─[
 */
