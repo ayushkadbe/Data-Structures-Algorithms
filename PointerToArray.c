@@ -15,4 +15,28 @@ int main(){
 
 
 //PROGRAM 2: POINTER TO FUNCTION IN C
+
+/*
+Create pointer variable with function declaration
+assign address of function to pointer
+call the pointer to call the function*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int multiplication();
+
+int main(){
+    int (*ptr)(); //create
+    ptr = &multiplication; //assign address
+    int result = (*ptr)();  //call
+    
+}
+
+int multiplication(){
+    int a,b;
+    printf("\n Enter two variables: ");
+    scanf("%d%d",&a,&b);
+    printf("\n The product of a * b is %d", a*b);
+}
+
 //PROGRAM 3: POINTER TO ARRAY OF FUNCTION IN C
